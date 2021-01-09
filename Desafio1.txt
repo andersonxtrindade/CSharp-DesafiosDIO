@@ -1,0 +1,19 @@
+using System;
+
+class Desafio {
+  static void Main(string[] args)
+    {
+      string[] vet = new string[2];
+      vet = Console.ReadLine().Split(' ');
+      var a = int.Parse(vet[0]);
+      var n = int.Parse(vet[1]);
+      var TotalPlacas = a * n;
+      double referencia = 0.10;
+      while (referencia <= 0.90)
+      {
+        var porc = TotalPlacas * referencia;
+        Console.Write(Math.Ceiling(porc) + " ");
+        referencia += 0.10;
+      }
+  }
+}
