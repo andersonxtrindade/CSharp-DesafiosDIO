@@ -1,0 +1,41 @@
+using System;
+
+namespace testes
+{
+    class Cardapio
+    {
+        static void Main(string[] args)
+        {
+            string[] linha = Console.ReadLine().Split(' ');
+            int N = int.Parse(linha[0]);
+            int D = int.Parse(linha[1]);
+            string mensagem = "";
+            int contador = 0;
+            bool achou = false;
+            for (int i = 0; i < D; i++)
+            {
+                string[] linha2 = Console.ReadLine().Split(' ');
+                string data = linha2[0];
+                for (int j = 1; j <= N; j++)
+                {
+                    if (int.Parse(linha2[j]) > 0)
+                    {
+                        contador += 1;
+                    }
+                }
+                if (contador == N)
+                {
+                    mensagem = data;
+                    achou = true;
+                    break;
+                }
+                contador = 0;
+            }
+            if(achou == true){
+              Console.WriteLine(mensagem);
+            }else{
+              Console.WriteLine("Pizza antes de FdA");
+            }
+        }
+    }
+}
