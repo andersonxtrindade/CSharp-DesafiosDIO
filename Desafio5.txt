@@ -1,0 +1,12 @@
+using System;
+
+class MinhaClasse {
+  public static void Main (string[] args) {
+    double idadeEmDias = int.Parse(Console.ReadLine());
+    double anos = Math.Floor(idadeEmDias / 365); // Implemente aqui o calculo dos anos
+    var meses = Math.Floor((idadeEmDias % 365) / 30);  // Implemente aqui o calculo dos meses 
+    var dias =  (idadeEmDias % 365) % 30;  // Implemente aqui o calculo dos dias
+
+    Console.WriteLine($"{anos} ano(s)\n{meses} mes(es)\n{dias} dia(s)");
+  }
+}

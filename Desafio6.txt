@@ -1,0 +1,19 @@
+using System;
+
+class MinhaClasse {
+  public static void Main (string[] args) {
+    string N = Console.ReadLine();
+    string[] linha = Console.ReadLine().Split(' ');
+    int A = int.Parse(linha[0]);
+    int B = int.Parse(linha[1]);
+    int total = A + B;
+    if(total <= int.Parse(N))
+    {
+      Console.WriteLine("Farei hoje!");
+    }
+    else
+    {
+      Console.WriteLine("Deixa para amanha!");
+    }
+  }
+}
